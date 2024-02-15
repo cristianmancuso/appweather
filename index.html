@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp">
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+<!-- General Container-->
+<div class='flex justify-center items-center border-white rounded'>
+
+           <!--  Container -->
+           <div class="w-screen h-screen flex justify-center items-center flex-col  bg-gradient-to-b from-blue-800 to-blue-600" id="container">
+        
+          
+                   <!-- Text-->
+                   <div id="textos">
+                   <p class="text-center p-4 text-white text-4xl border-2 border-white rounded"> Weather forecast </p>
+
+                </div>
+
+
+                      <!--Nombre de la ciudad-->
+                      <div class="m-4 gap-7" id="nombreCiudad"></div>
+
+                      <!--Temperatura en G y F-->
+                      <div class="m-4 gap-7" id="resultado"> </div>
+
+                      <!--Temperaturas maximas y minimas-->
+                      <div class="flex flex-row gap-7 p-5">
+                        <div id="temp-Min"></div>
+                        <div id="temp-Max"></div>
+                    </div>
+
+                
+
+                   <!-- form-->
+                   <form  class="flex justify-center items-center flex-col" id="formulario">
+
+
+                  <!-- Primer Input-->
+                  <label for="ciudad" class="text-white text-lg">City:</label><br>
+                  <input type="text" id="ciudadInput" name="ciudad" class="w-80 rounded border-blue-900 leading-tight focus:outline-none focus:bg-white focus:border-sky-300" placeholder="Choose the city"><br>
+ 
+
+    
+                 <!--Segundo input-->
+                 <label for="ciudad" class="text-white text-lg">Continent:</label><br>
+                 <select class="block appearance-none w-80 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:bg-white focus:border-sky-300" id="paisInput">
+                    <option value="">Choose the country</option>
+                    <option value="US">United States</option>
+                    <option value="AR">Argentina</option>
+                    <option value="ES">Spain</option>
+                    <option value="FR">France</option>
+                    <option value="IT">Italy</option>
+                
+
+                  </select>
+
+
+
+                <!--Boton-->
+                <button class="mt-14 bg-white   hover:scale-110 hover:duration-700 text-sky-700 font-bold py-2 px-4 rounded-full" value="submit" type="submit">
+                    Search
+                  </button>
+
+            
+
+                </form>
+           </div>
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
